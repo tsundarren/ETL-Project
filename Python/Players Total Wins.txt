@@ -1,0 +1,46 @@
+import pandas as pd
+from bokeh.plotting import figure, output_file, show, save, ColumnDataSource
+from bokeh.models.tools import HoverTool
+from bokeh.transform import factor_cmap
+from bokeh.palettes import Turbo256
+from bokeh.embed import components
+
+
+output_file('playerdatahistogram.html')
+
+df = pd.read_csv('https://raw.githubusercontent.com/tsundarren/ETL-Project/main/Data/nba_2017%20stats%20removed%20dupes.csv')
+
+source = ColumnDataSource(df)
+
+player_list = source.data['PLAYER'].tolist()
+
+p = figure(
+        y_range=player_list,
+        plot_width=800,
+        plot_height=8000,
+        title='Players Total Wins',
+        x_axis_label='Wins',
+        tools="pan,box_select,zoom_in,zoom_out,save,reset"
+)
+
+p.hbar(
+    y='PLAYER',
+    right='W',
+    left=0,
+    height=1,
+    fill_color=factor_cmap(
+      'PLAYER',
+      palette=Turbo256,
+      factors=player_list
+    ),
+    fill_alpha=0.9,
+    source=source
+)
+hover = HoverTool()
+hover.tooltips=[
+        ('Wins', '@W')
+]
+
+p.add_tools(hover)
+
+show(p)
