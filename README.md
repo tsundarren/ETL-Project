@@ -1,5 +1,5 @@
 # ETL Project - 2017 NBA Season Player Data
-This repository contains files from the ETL process, applied to the 2017 NBA Season Players Statistics
+This repository contains files from the ETL process, applied to the 2017 NBA Season players statistics
 ### Data
 Holds the CSV file for the 2017 NBA Season Player Data
 
