@@ -17,6 +17,7 @@ p.line(x='AGE', y='2P%', line_width=2, source=source, legend_label='2-Pointer %'
 p.line(x='AGE', y='3P%', line_width=2, source=source, color=Inferno6[1], legend_label='3-Pointer %')
 p.line(x='AGE', y='FT%', line_width=2, source=source, color=Inferno6[4], legend_label='Free-Throw %')
 
+p.xaxis.axis_label = 'Age'
 p.yaxis.axis_label = 'Shooting Percentage'
 
 show(p)
