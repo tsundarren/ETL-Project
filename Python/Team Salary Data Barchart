@@ -1,0 +1,39 @@
+import pandas as pd
+from bokeh.plotting import figure, output_file, show, save, ColumnDataSource
+from bokeh.models.tools import HoverTool
+from bokeh.transform import factor_cmap
+from bokeh.palettes import Turbo256
+from bokeh.embed import components
+
+
+output_file('teamdatabar.html')
+
+df = pd.read_csv('https://raw.githubusercontent.com/tsundarren/ETL-Project/main/Data/nba_2017%20stats%20removed%20dupes.csv')
+
+grouped = df.groupby('TEAM')[['SALARY_MILLIONS']].mean()
+
+source = ColumnDataSource(grouped)
+
+team_list = source.data['TEAM'].tolist()
+
+p = figure(x_range=team_list, plot_width=3000,
+        plot_height=800,)
+
+color_map = factor_cmap(field_name='TEAM',
+                    palette=Turbo256, factors=team_list)
+
+p.vbar(x='TEAM', top='SALARY_MILLIONS', source=source, width=.8, color=color_map)
+
+p.title.text = 'AVG Salary of NBA Teams'
+p.xaxis.axis_label = 'Team'
+p.yaxis.axis_label = 'Salary (Millions)'
+
+hover = HoverTool()
+hover.tooltips = [
+    ("Team", "@TEAM"),
+    ("AVG Salary (Millions)", "@SALARY_MILLIONS")
+]
+
+p.add_tools(hover)
+
+show(p)
