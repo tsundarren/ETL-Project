@@ -1,0 +1,30 @@
+import pandas as pd
+from bokeh.io import show, output_notebook
+from bokeh.models import CategoricalColorMapper, ColumnDataSource, FactorRange
+from bokeh.models.tools import HoverTool
+from bokeh.plotting import figure, output_file
+
+
+output_file('playerdata.html')
+
+df = pd.read_csv('https://raw.githubusercontent.com/tsundarren/ETL-Project/main/Data/nba_2017_nba_players_with_salary.csv')
+
+sample = df.sample(50)
+source = ColumnDataSource(sample)
+
+p = figure()
+p.circle(x='Rk', y='SALARY_MILLIONS', source=source, size=10, color='green')
+
+p.title.text = 'NBA Player Rank and Salary Correlation'
+p.xaxis.axis_label = 'NBA Player Rank'
+p.yaxis.axis_label = 'NBA Player Salary (Millions)'
+
+hover = HoverTool()
+hover.tooltips = [
+    ('Player', '@PLAYER'),
+    ('Rank', '@Rk'),
+    ('Salary (Millions)', '@SALARY_MILLIONS')
+]
+
+p.add_tools(hover)
+show(p)
