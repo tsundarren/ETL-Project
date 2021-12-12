@@ -1,0 +1,29 @@
+import pandas as pd
+from bokeh.io import show, output_notebook
+from bokeh.models import CategoricalColorMapper, ColumnDataSource, FactorRange
+from bokeh.models.tools import HoverTool
+from bokeh.plotting import figure, output_file
+
+
+output_file('3PAWinCorrelation.html')
+
+df = pd.read_csv('https://raw.githubusercontent.com/tsundarren/ETL-Project/main/Data/nba_2017_nba_players_with_salary.csv')
+
+source = ColumnDataSource(df)
+
+p = figure()
+p.circle(x='3PA', y='W', source=source, size=10, color='blue')
+
+p.title.text = '3-Point Average to Wins Correlation'
+p.xaxis.axis_label = '3-Point Average (Per Game)'
+p.yaxis.axis_label = 'Total Wins (2017 Season)'
+
+hover = HoverTool()
+hover.tooltips = [
+    ('Player', '@PLAYER'),
+    ('3PA', '@3PA'),
+    ('Wins', '@W')
+]
+
+p.add_tools(hover)
+show(p)
