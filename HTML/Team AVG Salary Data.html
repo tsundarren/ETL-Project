@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js" integrity="sha384-T2yuo9Oe71Cz/I4X9Ac5+gpEa5a8PpJCDlqKYO0CfAuEszu1JrXLl8YugMqYe3sM" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="957e0ce1-f936-4eae-ad57-14d5cf93f481" data-root-id="6363"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="6492">
+          {"2e463ff0-a662-4aef-9379-8017f711a756":{"roots":{"references":[{"attributes":{"axis":{"id":"6375"},"dimension":1,"ticker":null},"id":"6378","type":"Grid"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"6379"},{"id":"6380"},{"id":"6381"},{"id":"6382"},{"id":"6383"},{"id":"6384"},{"id":"6400"}]},"id":"6386","type":"Toolbar"},{"attributes":{"data":{"SALARY_MILLIONS":{"__ndarray__":"nRLkKUGeHEApXI/C9SgUQM3MzMzMzCBA00UXXXTRFkCkcD0K16MTQIDYVBpy7hlARoi3q+4dG0DHSzeJQaAgQJVDi2zn+w1AuR6F61EYMUAfhetRuB7tP/YoXI/C9SBApHA9Ctej/D+PwvUoXI8HQEEd1EEdVBRAAAAAAAAAFEAAAAAAAAABQFG4HoXrURxAC4hNpSFnKUCF61G4HoX3P3a+nxov3SpArkfhehSuEkBI4XoUrkf5P7PIdr6fGh9A1njpJjGIIEArGgn45lUgQEGeEuQpwSJAyFDZYepyFUChiy666KIdQJqZmZmZ2SJAslreGMFEEUBswRZswRYgQPYoXI/C9fQ/uB6F61G4rj9xPQrXo/AhQDp2m2O3OSFA9ihcj8L19D8AAAAAAAAUQB6F61G4HiBAexSuR+H6IkAAAAAAAEAmQCJDZYepyxZAU+Olm8QgG0D3KFyPwnUjQLLbHLvNsSJAQMhQ2WHqGUB66SYxCKwWQGTJL5b84hlA7DB1uf1BI0A=","dtype":"float64","order":"little","shape":[49]},"TEAM":["ATL","ATL/CLE","ATL/PHI/OKC","BKN","BKN/WSH","BOS","CHA","CHI","CHI/OKC","CLE","CLE/DAL","DAL","DAL/BKN","DAL/PHI","DEN","DEN/CHA","DEN/POR","DET","GS","GS/CHA","HOU","HOU/LAL","HOU/MEM","IND","LAC","LAL","MEM","MIA","MIL","MIL/CHA","MIN","NO","NO/MEM","NO/ORL","NO/SAC","NY","NY/PHI","NY/WSH","OKC","ORL","ORL/TOR","PHI","PHX","POR","SA","SAC","TOR","UTAH","WSH"]},"selected":{"id":"6408"},"selection_policy":{"id":"6409"}},"id":"6362","type":"ColumnDataSource"},{"attributes":{},"id":"6379","type":"PanTool"},{"attributes":{},"id":"6373","type":"CategoricalTicker"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","top_units":"screen"},"id":"6385","type":"BoxAnnotation"},{"attributes":{"source":{"id":"6362"}},"id":"6398","type":"CDSView"},{"attributes":{"axis_label":"Team","formatter":{"id":"6404"},"ticker":{"id":"6373"}},"id":"6372","type":"CategoricalAxis"},{"attributes":{"overlay":{"id":"6385"}},"id":"6381","type":"BoxZoomTool"},{"attributes":{},"id":"6382","type":"SaveTool"},{"attributes":{},"id":"6368","type":"CategoricalScale"},{"attributes":{"data_source":{"id":"6362"},"glyph":{"id":"6395"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"6396"},"selection_glyph":null,"view":{"id":"6398"}},"id":"6397","type":"GlyphRenderer"},{"attributes":{"axis":{"id":"6372"},"ticker":null},"id":"6374","type":"Grid"},{"attributes":{"fill_color":{"field":"TEAM","transform":{"id":"6393"}},"line_color":{"field":"TEAM","transform":{"id":"6393"}},"top":{"field":"SALARY_MILLIONS"},"width":{"value":0.8},"x":{"field":"TEAM"}},"id":"6395","type":"VBar"},{"attributes":{},"id":"6370","type":"LinearScale"},{"attributes":{"callback":null,"tooltips":[["Team","@TEAM"],["AVG Salary (Millions)","@SALARY_MILLIONS"]]},"id":"6400","type":"HoverTool"},{"attributes":{"factors":["ATL","ATL/CLE","ATL/PHI/OKC","BKN","BKN/WSH","BOS","CHA","CHI","CHI/OKC","CLE","CLE/DAL","DAL","DAL/BKN","DAL/PHI","DEN","DEN/CHA","DEN/POR","DET","GS","GS/CHA","HOU","HOU/LAL","HOU/MEM","IND","LAC","LAL","MEM","MIA","MIL","MIL/CHA","MIN","NO","NO/MEM","NO/ORL","NO/SAC","NY","NY/PHI","NY/WSH","OKC","ORL","ORL/TOR","PHI","PHX","POR","SA","SAC","TOR","UTAH","WSH"],"palette":["#30123b","#311542","#32184a","#341b51","#351e58","#36215f","#372365","#38266c","#392972","#3a2c79","#3b2f7f","#3c3285","#3c358b","#3d3791","#3e3a96","#3f3d9c","#4040a1","#4043a6","#4145ab","#4148b0","#424bb5","#434eba","#4350be","#4353c2","#4456c7","#4458cb","#455bce","#455ed2","#4560d6","#4563d9","#4666dd","#4668e0","#466be3","#466de6","#4670e8","#4673eb","#4675ed","#4678f0","#467af2","#467df4","#467ff6","#4682f8","#4584f9","#4587fb","#4589fc","#448cfd","#438efd","#4291fe","#4193fe","#4096fe","#3f98fe","#3e9bfe","#3c9dfd","#3ba0fc","#39a2fc","#38a5fb","#36a8f9","#34aaf8","#33acf6","#31aff5","#2fb1f3","#2db4f1","#2bb6ef","#2ab9ed","#28bbeb","#26bde9","#25c0e6","#23c2e4","#21c4e1","#20c6df","#1ec9dc","#1dcbda","#1ccdd7","#1bcfd4","#1ad1d2","#19d3cf","#18d5cc","#18d7ca","#17d9c7","#17dac4","#17dcc2","#17debf","#18e0bd","#18e1ba","#19e3b8","#1ae4b6","#1be5b4","#1de7b1","#1ee8af","#20e9ac","#22eba9","#24eca6","#27eda3","#29eea0","#2cef9d","#2ff09a","#32f197","#35f394","#38f491","#3bf48d","#3ff58a","#42f687","#46f783","#4af880","#4df97c","#51f979","#55fa76","#59fb72","#5dfb6f","#61fc6c","#65fc68","#69fd65","#6dfd62","#71fd5f","#74fe5c","#78fe59","#7cfe56","#80fe53","#84fe50","#87fe4d","#8bfe4b","#8efe48","#92fe46","#95fe44","#98fe42","#9bfd40","#9efd3e","#a1fc3d","#a4fc3b","#a6fb3a","#a9fb39","#acfa37","#aef937","#b1f836","#b3f835","#b6f735","#b9f534","#bbf434","#bef334","#c0f233","#c3f133","#c5ef33","#c8ee33","#caed33","#cdeb34","#cfea34","#d1e834","#d4e735","#d6e535","#d8e335","#dae236","#dde036","#dfde36","#e1dc37","#e3da37","#e5d838","#e7d738","#e8d538","#ead339","#ecd139","#edcf39","#efcd39","#f0cb3a","#f2c83a","#f3c63a","#f4c43a","#f6c23a","#f7c039","#f8be39","#f9bc39","#f9ba38","#fab737","#fbb537","#fbb336","#fcb035","#fcae34","#fdab33","#fda932","#fda631","#fda330","#fea12f","#fe9e2e","#fe9b2d","#fe982c","#fd952b","#fd9229","#fd8f28","#fd8c27","#fc8926","#fc8624","#fb8323","#fb8022","#fa7d20","#fa7a1f","#f9771e","#f8741c","#f7711b","#f76e1a","#f66b18","#f56817","#f46516","#f36315","#f26014","#f15d13","#ef5a11","#ee5810","#ed550f","#ec520e","#ea500d","#e94d0d","#e84b0c","#e6490b","#e5460a","#e3440a","#e24209","#e04008","#de3e08","#dd3c07","#db3a07","#d93806","#d73606","#d63405","#d43205","#d23005","#d02f04","#ce2d04","#cb2b03","#c92903","#c72803","#c52602","#c32402","#c02302","#be2102","#bb1f01","#b91e01","#b61c01","#b41b01","#b11901","#ae1801","#ac1601","#a91501","#a61401","#a31201","#a01101","#9d1001","#9a0e01","#970d01","#940c01","#910b01","#8e0a01","#8b0901","#870801","#840701","#810602","#7d0502","#7a0402"]},"id":"6393","type":"CategoricalColorMapper"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"TEAM","transform":{"id":"6393"}},"line_alpha":{"value":0.1},"line_color":{"field":"TEAM","transform":{"id":"6393"}},"top":{"field":"SALARY_MILLIONS"},"width":{"value":0.8},"x":{"field":"TEAM"}},"id":"6396","type":"VBar"},{"attributes":{},"id":"6384","type":"HelpTool"},{"attributes":{},"id":"6376","type":"BasicTicker"},{"attributes":{"axis_label":"Salary (Millions)","formatter":{"id":"6406"},"ticker":{"id":"6376"}},"id":"6375","type":"LinearAxis"},{"attributes":{"text":"AVG Salary of NBA Teams"},"id":"6399","type":"Title"},{"attributes":{},"id":"6366","type":"DataRange1d"},{"attributes":{},"id":"6406","type":"BasicTickFormatter"},{"attributes":{},"id":"6404","type":"CategoricalTickFormatter"},{"attributes":{"below":[{"id":"6372"}],"center":[{"id":"6374"},{"id":"6378"}],"left":[{"id":"6375"}],"plot_height":800,"plot_width":3000,"renderers":[{"id":"6397"}],"title":{"id":"6399"},"toolbar":{"id":"6386"},"x_range":{"id":"6364"},"x_scale":{"id":"6368"},"y_range":{"id":"6366"},"y_scale":{"id":"6370"}},"id":"6363","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"6408","type":"Selection"},{"attributes":{},"id":"6409","type":"UnionRenderers"},{"attributes":{},"id":"6383","type":"ResetTool"},{"attributes":{"factors":["ATL","ATL/CLE","ATL/PHI/OKC","BKN","BKN/WSH","BOS","CHA","CHI","CHI/OKC","CLE","CLE/DAL","DAL","DAL/BKN","DAL/PHI","DEN","DEN/CHA","DEN/POR","DET","GS","GS/CHA","HOU","HOU/LAL","HOU/MEM","IND","LAC","LAL","MEM","MIA","MIL","MIL/CHA","MIN","NO","NO/MEM","NO/ORL","NO/SAC","NY","NY/PHI","NY/WSH","OKC","ORL","ORL/TOR","PHI","PHX","POR","SA","SAC","TOR","UTAH","WSH"]},"id":"6364","type":"FactorRange"},{"attributes":{},"id":"6380","type":"WheelZoomTool"}],"root_ids":["6363"]},"title":"Bokeh Application","version":"2.2.3"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('6492').textContent;
+                  var render_items = [{"docid":"2e463ff0-a662-4aef-9379-8017f711a756","root_ids":["6363"],"roots":{"6363":"957e0ce1-f936-4eae-ad57-14d5cf93f481"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
