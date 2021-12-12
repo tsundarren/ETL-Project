@@ -5,12 +5,11 @@ from bokeh.models.tools import HoverTool
 from bokeh.plotting import figure, output_file
 
 
-output_file('playerdata.html')
+output_file('ranksalarycorrelation.html')
 
 df = pd.read_csv('https://raw.githubusercontent.com/tsundarren/ETL-Project/main/Data/nba_2017_nba_players_with_salary.csv')
 
-sample = df.sample(50)
-source = ColumnDataSource(sample)
+source = ColumnDataSource(df)
 
 p = figure()
 p.circle(x='Rk', y='SALARY_MILLIONS', source=source, size=10, color='green')
